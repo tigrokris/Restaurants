@@ -74,7 +74,7 @@
 </div>
 <div class="container">
     <div class="lead">
-        &nbsp;&nbsp;&nbsp;<a href="https://github.com/JavaOPs/topjava">Java Enterprise проект</a> с
+        &nbsp;&nbsp;&nbsp;<a href="https://github.com/tigrokris/Restaurants">Java Enterprise проект</a> с
         регистрацией/авторизацией и интерфейсом на основе ролей (USER, ADMIN).
         Администратор может создавать/редактировать/удалять/пользователей(кроме Admin и User), а пользователь - управлять своим
         профилем и голосовать,раз в сутки, за понравившееся блюдо(таким образом увеличивая рейтинг ресторана),
