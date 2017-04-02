@@ -19,19 +19,19 @@ import java.util.Set;
 /**
  * Created by Дмитрий on 07.05.2016.
  */
-@NamedQueries({
+/*@NamedQueries({
         @NamedQuery(name = User.DELETE, query = "DELETE FROM User u WHERE u.id=:id"),
         @NamedQuery(name = User.BY_EMAIL, query = "SELECT u FROM User u LEFT JOIN FETCH u.roles WHERE u.email=?1"),
         @NamedQuery(name = User.ALL_SORTED, query = "SELECT DISTINCT(u) FROM User u LEFT JOIN FETCH u.roles ORDER BY u.name, u.email"),
-})
+})*/
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Entity
 @Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = "email", name = "users_unique_email_idx")})
 public class User extends NamedEntity {
 
-    public static final String DELETE = "User.delete";
+/*    public static final String DELETE = "User.delete";
     public static final String ALL_SORTED = "User.getAllSorted";
-    public static final String BY_EMAIL = "User.getByEmail";
+    public static final String BY_EMAIL = "User.getByEmail";*/
 
     @Column(name = "email", nullable = false, unique = true)
     @Email
@@ -72,10 +72,10 @@ public class User extends NamedEntity {
         this.email = email;
         this.password = password;
         this.roles = roles;
-        DateFormat formatter = new SimpleDateFormat("YYYY/dd/MM");
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date=new Date();
         try {
-            date = formatter.parse("2000/01/01");
+            date = formatter.parse("2000-01-01");
         } catch (ParseException e) {
             e.printStackTrace();
         }

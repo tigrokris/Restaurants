@@ -8,17 +8,17 @@ import java.util.List;
  * Created by Дмитрий on 07.05.2016.
  */
 @SuppressWarnings("JpaQlInspection")
-@NamedQueries({
+/*@NamedQueries({
         @NamedQuery(name = Restaurant.GET, query = "SELECT r FROM Restaurant r WHERE r.id=:id"),
         @NamedQuery(name = Restaurant.ALL_SORTED, query = "SELECT r FROM Restaurant r ORDER BY r.votes DESC"),
         @NamedQuery(name = Restaurant.DELETE, query = "DELETE FROM Restaurant r WHERE r.id=:id"),
-})
+})*/
 @Entity
 @Table(name = "restaurants", uniqueConstraints = {@UniqueConstraint(columnNames = "name", name = "restaurants_unique_name_idx")})
 public class Restaurant extends NamedEntity {
-    public static final String GET = "Restaurant.get";
+/*    public static final String GET = "Restaurant.get";
     public static final String ALL_SORTED = "Restaurant.getAllSorted";
-    public static final String DELETE = "Restaurant.delete";
+    public static final String DELETE = "Restaurant.delete";*/
 
 
     @Column(name = "votes",nullable = false)
